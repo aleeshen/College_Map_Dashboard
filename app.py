@@ -32,6 +32,7 @@ def load_data():
     return data
 
 data = load_data()
+data.sort_values(by='Name', ignore_index=True, inplace=True)
 
 ranking = pd.read_csv(rank_file)
 
