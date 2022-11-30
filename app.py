@@ -134,13 +134,13 @@ for myidx, myrow in mygeom.query('Name in @colleges').iterrows():
         )
     
 
-st_folium(mymap, width=2000, height=1200)
+st_folium(mymap, width=2000, height=800)
 
 st.sidebar.title("US News Ranking 2023: National Colleges 🏅 (top 150 colleges) ")
 
 myrank = data_college['Rank'].tolist()[0]
 if np.isnan(myrank):
-    myrank = '>137 - rank not included'
+    myrank = '>137'
 else:
     mycnt = (data['Rank']==myrank).sum()
     myrank = int(myrank)
