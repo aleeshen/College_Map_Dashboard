@@ -134,7 +134,7 @@ for myidx, myrow in mygeom.query('Name in @colleges').iterrows():
         )
     
 
-st_folium(mymap, width=1200, height=600)
+st_folium(mymap, width=2000, height=1200)
 
 st.sidebar.title("US News Ranking 2023: National Colleges 🏅 (top 150 colleges) ")
 
@@ -150,6 +150,6 @@ else:
 ranking = f""" <p style="font-family:sans-serif; color:brown; font-size: 36px;"># {myrank}</p>"""
 st.sidebar.markdown(ranking, unsafe_allow_html=True)
 
-note = f'<p style="font-family:sans-serif; color:grey; font-size: 14px;"> Only top 150 colleges, with lowest rank of 137 including ties, are available here. </p>'
+note = f'<p style="font-family:sans-serif; color:grey; font-size: 14px;"> Only top 150 colleges including ties, with the lowest rank of 137, are available here. </p>'
 st.sidebar.markdown(note, unsafe_allow_html=True)
 
